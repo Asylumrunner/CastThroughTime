@@ -1,0 +1,8 @@
+- identifier:
+  header: blah blah blah # the text that will appear at the top of the card
+  set: exa # the three-digit set code that corresponds to the set this change was introduced in. if selected set is before this one, this card is shown
+  subheader: blah blah blah # another line of explainer text that will contain more context
+  img: cooldudeimg.png # the path to an image to be displayed in the card
+  body: this was super cool when this happened # the main body text of the card
+  category: cool-shit # a categorization tag of what type of update this is
+  boundary-set: nop # an optional three-letter set code. if selected set is before this one, this card is not shown

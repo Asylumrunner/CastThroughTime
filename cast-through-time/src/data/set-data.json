@@ -1,0 +1,41 @@
+{
+  "lea": {
+    "date": "1993-08-05",
+    "name": "Limited Edition Alpha"
+  },
+  "leb": {
+    "date": "1993-10-01",
+    "name": "Limited Edition Beta"
+  },
+  "2ed": {
+    "date": "1993-12-01",
+    "name": "Unlimited Edition"
+  },
+  "3ed": {
+    "date": "1994-04-01",
+    "name": "Revised Edition"
+  },
+  "4ed": {
+    "date": "1995-04-01",
+    "name": "Fourth Edition"
+  },
+  "5ed": {
+    "date": "1997-03-24",
+    "name": "Fifth Edition"
+  },
+  "6ed": {
+    "date": "1999-04-28",
+    "name": "Sixth Edition"
+  },
+  "7ed": {
+    "date": "2001-04-11",
+    "name": "Seventh Edition"
+  },
+  "8ed": {
+    "date": "2003-07-28",
+    "name": "Eighth Edition"
+  },
+  "9ed": {
+    "date": "200"
+  }
+}
