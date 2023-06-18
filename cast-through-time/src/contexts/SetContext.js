@@ -7,10 +7,12 @@ function SetContextProvider({children}) {
 
     const [lastPlayedSet, setLastPlayedSet] = useState('3ed');
 
+    const sets = setDict
+
     const cards = [
         {
             header: 'header',
-            set: 'leb',
+            set: '3ed',
             subheader: 'subheader',
             img: 'img.png',
             body: 'body',
@@ -34,12 +36,18 @@ function SetContextProvider({children}) {
         }
     ]
 
-    const cardsToShow = cards.filter((card) => setDict[lastPlayedSet].date < setDict[card.set].date)
+    const selectSet = (setCode) => {
+        console.log(setCode);
+        setLastPlayedSet(setCode);
+    }
+
+    const cardsToShow = cards.filter((card) => sets[lastPlayedSet].date < sets[card.set].date)
     
     const setControl = {
         lastPlayedSet,
-        setLastPlayedSet,
-        cardsToShow
+        selectSet,
+        cardsToShow,
+        sets
     }
 
     return <SetContext.Provider value={setControl}>
