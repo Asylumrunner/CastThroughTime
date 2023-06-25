@@ -1,20 +1,58 @@
-import { useContext } from "react";
+import { useContext, useRef, useState } from "react";
 import SetContext from "../contexts/SetContext";
 
 function SetSelector() {
-    const { sets, selectSet, lastPlayedSet } = useContext(SetContext)
-
-    const setCards = Object.keys(sets).map((setCode) => {
-        const iconName = `ss ss-4x ss-rare ss-grad ss-${setCode}`
-        const boxStyle = lastPlayedSet === setCode ? "border-4 border-red-500 max-w-screen-sm justify-center" : "border border-black max-w-screen-sm"
-        return (<div key={setCode} onClick={() => {selectSet(setCode)}}className={boxStyle}>
-            <i className={iconName} />
-            <div>{sets[setCode].name}</div>
-            <div>{sets[setCode].date}</div>
-        </div>)
+    const { sets, lastPlayedSet, selectSet } = useContext(SetContext);
+    const sliderRef = useRef(null);
+    const [startIdx, setStartIdx] = useState(0);
+    const [endIdx, setEndIdx] = useState(5); // Adjust the number of sets to display
+  
+    const handleScroll = (scrollOffset) => {
+      sliderRef.current.scrollLeft += scrollOffset;
+    };
+  
+    const visibleSetKeys = Object.keys(sets).slice(startIdx, endIdx);
+    const visibleSets = visibleSetKeys.map((key) => {
+        return {...sets[key], code: key}
     })
-
-    return <div className="grid gap-4 grid-cols-3 grid-rows-3">{setCards}</div>
-}
+    console.log(visibleSets)
+  
+    return (
+        <div className="flex items-center space-x-4">
+          <button
+            className="px-4 py-2 bg-gray-300 rounded-md"
+            disabled={startIdx === 0}
+            onClick={() => {
+              setStartIdx(startIdx - 1);
+              setEndIdx(endIdx - 1);
+            }}
+          >
+            Left
+          </button>
+          <div
+            className="flex space-x-4 overflow-x-auto scrollbar-hide"
+            ref={sliderRef}
+          >
+            {visibleSets.map((set) => (
+              <div className="flex-shrink-0" key={set.code} onClick={() => selectSet(set.code)}>
+                <img src={set.img_url} alt={set.name} className="w-24 h-24" />
+                <p>{set.date}</p>
+              </div>
+            ))}
+          </div>
+          <button
+            className="px-4 py-2 bg-gray-300 rounded-md"
+            disabled={endIdx >= Object.values(sets).length}
+            onClick={() => {
+              setStartIdx(startIdx + 1);
+              setEndIdx(endIdx + 1);
+            }}
+          >
+            Right
+          </button>
+        </div>
+      );
+  };
+  
 
 export default SetSelector;
