@@ -6,7 +6,9 @@ import SetSelector from "./components/SetSelector";
 function App() {
   return (<div>
     <Header />
-    <SetSelector />
+    <div className="flex items-center justify-center">
+      <SetSelector />
+    </div>
     <CardList />
     <Footer />
   </div>)
