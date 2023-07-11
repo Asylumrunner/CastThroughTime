@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 const dataApi = createApi({
     reducerPath: 'data',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://vgxtbajgbd.execute-api.us-west-1.amazonaws.com/prod',
+        baseUrl: 'https://7ksu0sxwll.execute-api.us-west-1.amazonaws.com/prod',
         credentials: "same-origin", 
     }),
     endpoints(builder) {
