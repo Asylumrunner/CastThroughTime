@@ -42,7 +42,7 @@ function SetSelector() {
             <img src={set.img_url} alt={set.name} className="w-24 h-24" />
           </div>
           <div className="text-center">
-            <p className={`font-semibold ${set.code === lastPlayedSet && 'text-green-500'}`}>{set.name}</p>
+            <p style={{fontFamily: 'PT Serif'}} className={`font-semibold ${set.code === lastPlayedSet && 'text-green-500'}`}>{set.name}</p>
             <p>{set.date}</p>
           </div>
         </div>

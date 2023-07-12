@@ -20,7 +20,7 @@ function CardList() {
         })
 
         const cards = filteredCards.map((card) => {
-            return <InfoCard card={card} />
+            return <InfoCard key={card.identifier} card={card} />
         })
     
         return <div>
