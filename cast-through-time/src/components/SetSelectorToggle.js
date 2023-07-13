@@ -7,7 +7,7 @@ function SetSelectorToggle() {
     const [narrowWindow, setNarrowWindow] = useState(window.innerWidth < narrowWindowThreshold)
 
     const checkForNarrowToggle = (width) => {
-      let resizeRequired = (width >= narrowWindowThreshold) == narrowWindow
+      let resizeRequired = (width >= narrowWindowThreshold) === narrowWindow
       if (resizeRequired) {
         setNarrowWindow(!narrowWindow)
       }
