@@ -1,7 +1,28 @@
 import '../keyrune-master/keyrune-master/css/keyrune.css';
-import image from '../img/sagas.png'
 
 function InfoCard({card}) {
+
+    let cardContents;
+
+    if (card.img) {
+        cardContents = (<div className="flex items-center" style={{fontFamily: 'Roboto Slab'}}>
+        <div className='w-1/3'><img alt='pictures' src={`/img/${card.img}`}/></div>
+        <div className='w-2/3 mr-2'>{card.body.split("/n").map((row) => {
+            return <>
+                {row}<br/><br/>
+            </>
+        })}</div>
+    </div>)
+    } else {
+        cardContents = (<div className="flex items-center" style={{fontFamily: 'Roboto Slab'}}>
+        <div className='mx-2'>{card.body.split("/n").map((row) => {
+            return <>
+                {row}<br/><br/>
+            </>
+        })}</div>
+    </div>)
+    }
+
     const iconName = `ss ss-4x ss-rare ss-grad ss-${card.set}`
     return (<div className='border-4 border-black bg-slate-300 m-4 rounded-lg'>
         <div className="m-2 flex flex-row items-center justify-between">
@@ -14,14 +35,7 @@ function InfoCard({card}) {
                 <div style={{fontFamily: 'PT Serif'}}>Introduced in {card.set.toUpperCase()}</div>
             </div>
         </div>
-        <div className="flex items-center" style={{fontFamily: 'Roboto Slab'}}>
-            <div className='w-1/3'><img alt='pictures' src={image}/></div>
-            <div className='w-2/3 mr-2'>{card.body.split("/n").map((row) => {
-                return <>
-                    {row}<br/><br/>
-                </>
-            })}</div>
-        </div>        
+        {cardContents}     
     </div>)
 }
 
