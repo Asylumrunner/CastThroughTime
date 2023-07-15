@@ -39,7 +39,7 @@ function SetSelector() {
       const iteratedSets = visibleSets.map((set) => (
         <div className="flex-shrink-0" key={set.code} style={{ width: '200px' }} onClick={() => handleChangeLastPlayedSet(set.code)}>
           <div className="flex items-center justify-center">
-            <img src={set.img_url} alt={set.name} className="w-24 h-24" />
+            <img src={`https://castthroughtime.s3.us-west-1.amazonaws.com/setsymbol/${set.code}.svg`} alt={set.name} className="w-24 h-24" />
           </div>
           <div className="text-center">
             <p style={{fontFamily: 'PT Serif'}} className={`font-semibold ${set.code === lastPlayedSet && 'text-green-500'}`}>{set.name}</p>
