@@ -1,5 +1,3 @@
-import '../keyrune-master/keyrune-master/css/keyrune.css';
-
 function InfoCard({card}) {
 
     let cardContents;
@@ -23,7 +21,6 @@ function InfoCard({card}) {
     </div>)
     }
 
-    const iconName = `ss ss-4x ss-rare ss-grad ss-${card.set}`
     return (<div className='border-4 border-black bg-slate-300 m-4 rounded-lg'>
         <div className="m-2 flex flex-row items-center justify-between">
             <div className="flex-col justify-items-center">
@@ -31,7 +28,7 @@ function InfoCard({card}) {
                 <div className="italic">{card.subheader}</div>
             </div>     
             <div className="flex-col items-center">
-                <div className="flex place-content-center"><i className={iconName} /></div>
+                <div className="flex place-content-center"><img src={`https://castthroughtime.s3.us-west-1.amazonaws.com/setsymbol/${card.set}.svg`} alt={card.set} className="w-16 h-16" /></div>
                 <div style={{fontFamily: 'PT Serif'}}>Introduced in {card.set.toUpperCase()}</div>
             </div>
         </div>
