@@ -1,6 +1,6 @@
 function Header() {
     return (<div className="flex-col justify-items-center items-center pb-8">
-        <h2 style={{fontFamily: 'PT Serif'}} className="m-3 text-4xl font-bold text-center">Hop Back In The Spellcasting Saddle, and Cast Through Time</h2>
+        <h2 style={{fontFamily: 'PT Serif'}} className="m-3 text-4xl font-bold text-center">Cast Through Time: Catching Up With The Changes To Magic</h2>
         <p style={{fontFamily: 'Roboto Slab'}} className="px-8">Been a while since you played <i>Magic: The Gathering</i>? Understandable, the game's been going for over 30 years. 
         With every new set comes new cards, new keywords, new ways to play, and frequently, new card types and major changes to the rules.
         While there are many resources out there for learning the game from scratch, many players come back to the game after a prolonged break, and don't need a full rundown of the rules, 
