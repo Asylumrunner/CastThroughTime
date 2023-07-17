@@ -12,9 +12,9 @@ function InfoCard({card}) {
     let cardContents;
 
     if (card.img) {
-        cardContents = (<div className="flex items-center" style={{fontFamily: 'Roboto Slab'}}>
-        <div className='w-1/3'><img alt='pictures' src={`/img/${card.img}`}/></div>
-        <div className='w-2/3 mr-2'>{card.body.split("/n").map((row) => {
+        cardContents = (<div className="flex flex-wrap xl:flex-nowrap items-center justify-center xl:justify-normal" style={{fontFamily: 'Roboto Slab'}}>
+        <div className='xl:w-1/3'><img alt='pictures' src={`/img/${card.img}`}/></div>
+        <div className='xl:w-2/3 mx-2'>{card.body.split("/n").map((row) => {
             return <>
                 {row}<br/><br/>
             </>

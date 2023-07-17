@@ -4,7 +4,7 @@ function Header() {
         <p style={{fontFamily: 'Roboto Slab'}} className="px-8">Been a while since you played <i>Magic: The Gathering</i>? Understandable, the game's been going for over 30 years. 
         With every new set comes new cards, new keywords, new ways to play, and frequently, new card types and major changes to the rules.
         While there are many resources out there for learning the game from scratch, many players come back to the game after a prolonged break, and don't need a full rundown of the rules, 
-        but a more selective description of the major things that have changed since the last time they tapped out. That's where <i>Cast Through Time</i> comes in.<br />
+        but a more selective description of the major things that have changed since the last time they tapped out. That's where <i>Cast Through Time</i> comes in.<br /><br />
         Using the set selector below, pick the last set to have come out before you stepped away from the game of <i>Magic</i>. We'll pull up the biggest rules changes, new card types, 
         play paradigms, and other big modifications to the game of <i>Magic</i> since you were gone. This won't be a comprehensive description of what's gone on, there are numerous 
         smaller rules (such as keywords, most commonly) that are too much to go through right here. Instead, <i>Cast Through Time</i> is an attempt to give you all of the information likely to
