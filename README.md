@@ -6,7 +6,7 @@ The live page can be found [here](https://www.castthroughtime.com)
 1. [Background](https://www.github.com/Asylumrunner/CastThroughTime#background)
 2. [Design Philosophy](https://www.github.com/Asylumrunner/CastThroughTime#design-philosophy)
 3. [Tech Stack](https://www.github.com/Asylumrunner/CastThroughTime#tech-stack)
-4. [Acknowledgements](https://www.github.com/Asylumrunner/CastThroughTime#acknowledgements)
+4. [Acknowledgements](https://github.com/Asylumrunner/CastThroughTime#acknolwedgements)
 
 ## Background
 _[Magic: the Gathering](https://en.wikipedia.org/wiki/Magic:_The_Gathering)_ is a trading card game designed by Richard Garfield and which has seen regular casual and competitive play since its creation in 1993. In the game, players (given the title of "Planeswalkers") take on the role of powerful spellcasters, attempting to defeat one another by summoning powerful creatures, casting spells, wielding enchanted artifacts, and other general nerd stuff. Players assemble their own deck of cards in advance according to the rules of the "format" being played (think NFL vs. XFL vs. Aussie rules football. Same game, different tweaks on the edges) and using 30+ years' of printed cards.
