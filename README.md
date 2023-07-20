@@ -31,6 +31,8 @@ _Cast Through Time_ was developed in part as a personal project to brush up on R
 
 With the list of sets, the S3 bucket of set symbols, and the full collection of rules data, the site can then render a "set selector" which allows a user to easily select which set they stopped playing _Magic_ during, and with that information the page renders out a list of all crucial, relevant information that the returning player needs to get back into the game.
 
+The front-end is deployed to AWS via AWS Amplify.
+
 ## Acknolwedgements
 Portions of _Cast Through Time_ are unofficial Fan Content permitted under the Wizards of the Coast Fan Content Policy. The literal and graphical information presented on this site about Magic: The Gathering, including card images and mana symbols, is copyright Wizards of the Coast, LLC. _Cast Through Time_ is not produced by or endorsed by Wizards of the Coast.
 
