@@ -18,6 +18,16 @@ function SetSelector() {
     const handleChangeLastPlayedSet = (set) => {
       dispatch(changeLastPlayedSet(set))
     }
+
+    const checkImageExistsLocal = (setname) => {
+      try {
+          require(`../images/${setname}.svg`)
+          return true
+      } catch (error) {
+          console.log(error)
+          return false
+      }
+  }
   
     if (isFetching) {
       return <div>Loading data plz be patient</div>
@@ -36,17 +46,19 @@ function SetSelector() {
           return {...data[key], code: key}
       })
 
-      const iteratedSets = visibleSets.map((set) => (
+      const iteratedSets = visibleSets.map((set) => {
+        let imgPath = checkImageExistsLocal(set.code) ? `../images/${set.code}.svg`: `https://castthroughtime.s3.us-west-1.amazonaws.com/setsymbol/${set.code}.svg`
+        return (
         <div className="flex-shrink-0" key={set.code} style={{ width: '200px' }} onClick={() => handleChangeLastPlayedSet(set.code)}>
           <div className="flex items-center justify-center">
-            <img src={`https://castthroughtime.s3.us-west-1.amazonaws.com/setsymbol/${set.code}.svg`} alt={set.name} className="w-24 h-24" />
+            <img src={imgPath} alt={set.name} className="w-24 h-24" />
           </div>
           <div className="text-center">
             <p style={{fontFamily: 'PT Serif'}} className={`font-semibold ${set.code === lastPlayedSet && 'text-green-500'}`}>{set.name}</p>
             <p>{set.date}</p>
           </div>
         </div>
-      ))
+      )})
 
       return (
         <div>
