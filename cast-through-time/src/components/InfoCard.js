@@ -1,14 +1,5 @@
 function InfoCard({card}) {
 
-    const type_gradients = {
-        type:  "from-slate-300 to-blue-300",
-        rules: "from-slate-300 to-red-300",
-        format: "from-slate-300 to-green-300",
-        keywords: "from-slate-300 to-yellow-300",
-        lore: "from-slate-300 to-cyan-300",
-        product: "from-slate-300 to-violet-300",
-    }
-
     let cardContents;
 
     const checkImageExistsLocal = () => {
@@ -42,13 +33,13 @@ function InfoCard({card}) {
     </div>)
     }
 
-    return (<div className={`border-4 border-black bg-gradient-to-r ${type_gradients[card.category]} m-4 rounded-lg`}>
+    return (<div className={`bg-sky-200 m-4 rounded-lg`}>
         <div className="m-2 flex flex-row items-center justify-between">
             <div className="flex-col justify-items-center">
-                <h1 style={{fontFamily: 'PT Serif'}} className="text-3xl font-bold underline justify-self-center">{card.header}</h1>
+                <h1 style={{fontFamily: 'PT Serif'}} className="text-3xl font-bold justify-self-center">{card.header}</h1>
                 <div className="italic">{card.subheader}</div>
             </div>     
-            <div className="flex-col items-center">
+            <div className="flex-col items-center m-2">
                 <div className="flex place-content-center"><img src={imagePath} alt={card.set} className="w-16 h-16" /></div>
                 <div style={{fontFamily: 'PT Serif'}}>Introduced in {card.set.toUpperCase()}</div>
             </div>

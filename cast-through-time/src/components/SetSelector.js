@@ -62,7 +62,6 @@ function SetSelector() {
 
       return (
         <div>
-          <div className="flex items-center justify-center mb-3" style={{fontFamily: 'Roboto Slab'}}>You haven't played Magic since <b className="ps-1">{ data[lastPlayedSet].name }</b></div>
           <div className="flex items-center space-x-4">
             <button
               className="px-4 py-2 bg-gray-300 rounded-md"
@@ -108,6 +107,7 @@ function SetSelector() {
               Oldest
             </button>
           </div>
+          <div className="flex items-center justify-center mt-3" style={{fontFamily: 'Roboto Slab'}}>You haven't played Magic since <b className="ps-1">{ data[lastPlayedSet].name }</b></div>
         </div>
       );
     }
