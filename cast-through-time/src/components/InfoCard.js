@@ -33,7 +33,7 @@ function InfoCard({card}) {
     </div>)
     }
 
-    return (<div className={`bg-sky-200 m-4 rounded-lg`}>
+    return (<div className={`border-4 border-black bg-gradient-to-r ${type_gradients[card.category]} m-4 rounded-lg snap-start h-4/5`}>
         <div className="m-2 flex flex-row items-center justify-between">
             <div className="flex-col justify-items-center">
                 <h1 style={{fontFamily: 'PT Serif'}} className="text-3xl font-bold justify-self-center">{card.header}</h1>

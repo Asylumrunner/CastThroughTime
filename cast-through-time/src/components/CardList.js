@@ -23,7 +23,7 @@ function CardList() {
             return <InfoCard key={card.identifier} card={card} />
         })
     
-        return <div>
+        return <div className="h-screen overflow-scroll snap-y snap-mandatory scroll-pt-1000">
             {cards}
         </div>
     }
