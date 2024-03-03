@@ -2,6 +2,8 @@ function InfoCard({card}) {
 
     let cardContents;
 
+    const headerHeight = window.innerHeight * 1/5
+
     const checkImageExistsLocal = () => {
         try {
             require(`../images/${card.set}.svg`)
@@ -14,8 +16,8 @@ function InfoCard({card}) {
 
     const imagePath = checkImageExistsLocal() ? `../images/${card.set}.svg` : `https://castthroughtime.s3.us-west-1.amazonaws.com/setsymbol/${card.set}.svg`
 
-    return (<div className="flex flex-row snap-start">
-        {card.img && <div className="basis-1/2 self-center">
+    return (<div className="flex flex-row snap-start h-screen pt-20">
+        {card.img && <div className="basis-1/2 self-center justify-self-center">
             <img alt="An example for this card" src={`/img/${card.img}`}/>
         </div>}
         <div className="basis-1/2 flex flex-col pr-8 self-center">
