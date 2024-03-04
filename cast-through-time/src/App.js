@@ -1,11 +1,8 @@
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import CardList from "./components/CardList";
 
 function App() {
-  const headerHeight = window.innerHeight * 1/5
-
-  return (<div className={`h-screen overflow-scroll snap-y snap-mandatory`}>
+  return (<div className="h-screen overflow-scroll snap-y snap-mandatory bg-gradient-to-b from-cyan-500 via-red-200 to-emerald-300">
     <Header />
     <CardList />
   </div>)
