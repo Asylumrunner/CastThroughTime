@@ -27,7 +27,7 @@ function SetDropdown() {
         let options = []
         
         sortedSets.forEach((setCode) => {
-            options.push({ value: setCode, label: data[setCode].name})
+            options.push({ value: setCode, label: `${data[setCode].name} (${data[setCode].date.slice(0, 4)})`})
         })
         
         return (<div>
