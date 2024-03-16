@@ -8,7 +8,7 @@ function CardList() {
 
     const lastPlayedSet = useSelector((state) => {
         return state.currentSet.lastPlayedSet;
-      })
+    })
 
     if (fetchCards.isFetching || fetchSets.isFetching) {
         return <div>Fetching set data</div>
