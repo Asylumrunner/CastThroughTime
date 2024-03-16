@@ -1,9 +1,5 @@
 function InfoCard({card}) {
 
-    let cardContents;
-
-    const headerHeight = window.innerHeight * 1/5
-
     const checkImageExistsLocal = () => {
         try {
             require(`../images/${card.set}.svg`)
