@@ -1,6 +1,11 @@
 import SetDropdown from './SetDropdown'
+import { useSelector } from 'react-redux';
 
 function Header() {
+    const lastPlayedSet = useSelector((state) => {
+        return state.currentSet.lastPlayedSet;
+      })
+
     return (
         <div style={{fontFamily: 'Roboto Slab'}} className="sticky top-0 w-full bg-transparent py-4 h-1/5">
             <div className="text-center px-4">

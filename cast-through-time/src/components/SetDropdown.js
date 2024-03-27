@@ -29,9 +29,10 @@ function SetDropdown() {
         sortedSets.forEach((setCode) => {
             options.push({ value: setCode, label: `${data[setCode].name} (${data[setCode].date.slice(0, 4)})`})
         })
+
         
-        return (<div>
-            <div className="mb-3 text-center" style={{fontFamily: 'Roboto Slab'}}>You haven't played Magic since <b>{ data[lastPlayedSet].name }</b></div>
+        return (<div className="mt-3 w-96">
+            {(lastPlayedSet == "---") || <div className="mb-2 text-center" style={{fontFamily: 'Roboto Slab'}}>You haven't played Magic since</div>}
             <Select defaultValue={lastPlayedSet} options={options} onChange={setSelectedSet} />
         </div>)
     }
