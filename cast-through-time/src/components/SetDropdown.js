@@ -31,7 +31,7 @@ function SetDropdown() {
         })
         
         return (<div>
-            <div className="mb-3" style={{fontFamily: 'Roboto Slab'}}>You haven't played Magic since <b>{ data[lastPlayedSet].name }</b></div>
+            <div className="mb-3 text-center" style={{fontFamily: 'Roboto Slab'}}>You haven't played Magic since <b>{ data[lastPlayedSet].name }</b></div>
             <Select defaultValue={lastPlayedSet} options={options} onChange={setSelectedSet} />
         </div>)
     }

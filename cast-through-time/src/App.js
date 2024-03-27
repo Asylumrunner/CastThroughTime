@@ -17,7 +17,7 @@ function App() {
     })
   }, [lastPlayedSet])
 
-  return (<div ref={listRef} className="h-screen overflow-scroll snap-y snap-mandatory bg-gradient-to-b from-cyan-500 to-emerald-300">
+  return (<div ref={listRef} className="h-screen overflow-scroll snap-y snap-proximity lg:snap-mandatory bg-gradient-to-b from-cyan-500 to-emerald-300">
     <Header />
     <CardList />
   </div>)
