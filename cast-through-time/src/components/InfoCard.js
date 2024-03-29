@@ -12,7 +12,7 @@ function InfoCard({card}) {
 
     const imagePath = checkImageExistsLocal() ? `../images/${card.set}.svg` : `https://castthroughtime.s3.us-west-1.amazonaws.com/setsymbol/${card.set}.svg`
 
-    return (<div className="flex flex-col lg:flex-row snap-start h-screen pt-20 mb-30 lg:mb-0">
+    return (<div className="flex flex-col lg:flex-row snap-start h-screen md:pt-20 mb-30 lg:mb-0">
         {card.img && <div className="basis-1/2 self-center justify-self-center">
             <img className="size-1/3 lg:size-auto" alt="An example for this card" src={`/img/${card.img}`}/>
         </div>}
