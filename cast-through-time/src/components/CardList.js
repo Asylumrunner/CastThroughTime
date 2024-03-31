@@ -14,6 +14,8 @@ function CardList() {
         return <div>Fetching set data</div>
     } else if (fetchCards.error || fetchSets.error) {
         return <div>Fetching set data fucked up somewhere</div>
+    } else if (lastPlayedSet === "---") {
+        return <div/>
     } else {
         const filteredCards = fetchCards.data.filter((card) => {
             return (new Date(fetchSets.data[lastPlayedSet].date) < new Date(fetchSets.data[card.set].date)) && ( !card["boundary-set"] || (new Date(fetchSets.data[lastPlayedSet].date) > new Date(fetchSets.data[card["boundary-set"]].date)))
