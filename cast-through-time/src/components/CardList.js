@@ -17,9 +17,13 @@ function CardList() {
     } else if (lastPlayedSet === "---") {
         return <div/>
     } else {
-        const filteredCards = fetchCards.data.filter((card) => {
+        let filteredCards = fetchCards.data.filter((card) => {
             return (new Date(fetchSets.data[lastPlayedSet].date) < new Date(fetchSets.data[card.set].date)) && ( !card["boundary-set"] || (new Date(fetchSets.data[lastPlayedSet].date) > new Date(fetchSets.data[card["boundary-set"]].date)))
         })
+
+        if (filteredCards.length === 0) {
+            filteredCards = [fetchCards.data.find((card) => card.identifier === 'allgood' )]
+        }
 
         const cards = filteredCards.map((card) => {
             return <InfoCard key={card.identifier} card={card} />
